@@ -21,7 +21,7 @@ async function detectAdBlock() {
   } catch (e) {
     adBlockEnabled = true
   } finally {
-    console.log(`AdBlock Enabled: ${adBlockEnabled}`)
+    window.location.href = "../adblock";
   }
 }
 detectAdBlock()
