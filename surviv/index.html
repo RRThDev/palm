@@ -9,3 +9,18 @@
 <a href="https://link-to.net/261199/roblox"><img class="center" src="./rbxad.png" title="Shorte.st links, biggest payouts" width="400" height="200" style="text-align:center;" /></a>
 <br><br><iframe src="https://surviv.io" style="display:block; margin:0 auto; height: 600px; width: 1200px;" ></iframe><br><br>
 <a href="http://join-shortest.com/ref/9108136953?user-type=new"><img class="center" src="//static.shorte.st/bundles/smeuser/img/referral_banners/468x60.png?2020-02-19.0" title="Shorte.st links, biggest payouts" width="468" height="60" style="text-align:center;" /></a>
+  <script>
+async function detectAdBlock() {
+  let adBlockEnabled = false
+  const googleAdUrl = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+  try {
+    await fetch(new Request(googleAdUrl)).catch(_ => adBlockEnabled = true)
+  } catch (e) {
+    adBlockEnabled = true
+  } finally {
+    window.location.href = "../adblock";
+  }
+}
+    
+detectAdBlock()
+</script>
