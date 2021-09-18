@@ -25,5 +25,20 @@ body, html {height: 100%}
     <a href="./geo"><button class="w3-button w3-khaki">Geometry Dash: Play Geo Dash Online</button></a><br><br>
   </div>
 
+  
+  <script>
+async function detectAdBlock() {
+  let adBlockEnabled = false
+  const googleAdUrl = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+  try {
+    await fetch(new Request(googleAdUrl)).catch(_ => adBlockEnabled = true)
+  } catch (e) {
+    adBlockEnabled = true
+  } finally {
+    window.location.href = "./adblock";
+  }
+}
+detectAdBlock()
+</script>
 </body>
 </html>
