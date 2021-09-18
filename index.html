@@ -26,19 +26,6 @@ body, html {height: 100%}
   </div>
 
   
-  <script>
-async function(detectAdBlock() {
-  let adBlockEnabled = false
-  const googleAdUrl = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
-  try {
-    await fetch(new Request(googleAdUrl)).catch(_ => adBlockEnabled = true)
-  } catch (e) {
-    adBlockEnabled = true
-  } finally {
-    window.location.href = "./adblock";
-  }
-}, 10000);
-detectAdBlock()
-</script>
+
 </body>
 </html>
